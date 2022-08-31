@@ -1,9 +1,14 @@
 import './App.css';
+// import Loginpage from './component/loginpage/loginpage';
+// import Userpage from './component/userpage/userpage';
+import Signuppage from './component/signuppage/signuppage';
 
 function App() {
   return (
     <div className="App">
-      hello world
+      {/* <Loginpage/> */}
+      {/* <Userpage/> */}
+      <Signuppage/>
     </div>
   );
 }

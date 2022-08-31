@@ -1,0 +1,113 @@
+*:root {
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+h1 {
+    font-size  : 36px;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+.userpage {
+
+    min-height    : 10em;
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    width         : 30vw;
+    height        : 57vh;
+    border-radius : 20px;
+    box-shadow    : 0 0 15px 5px rgb(0, 0, 0);
+    background    : white;
+    position      : relative
+}
+
+
+
+
+.contact-form {
+    font-size       : 150%;
+    display         : flex;
+    flex-direction  : column;
+    border          : 1px solid #ffffff;
+    border-radius   : 5px;
+    background-color: #ffffff;
+}
+
+
+
+
+
+.DOB {
+    right           : 0;
+    padding-top     : 10px;
+    padding-bottom  : 10px;
+    background-color: #fff;
+    border-radius   : 5px;
+    border          : 1px solid #c1c1c1;
+    font-size       : 14px;
+}
+
+.button {
+
+    display        : flex;
+    gap            : 20%;
+    justify-content: center;
+    align-items    : center;
+}
+
+.submit-btn {
+    font-size       : medium;
+    align-items     : center;
+    margin-top      : 10px;
+    width           : 40%;
+    padding-top     : 10px;
+    padding-bottom  : 10px;
+    border-radius   : 20px;
+    color           : #fff;
+    background-color: rgb(0, 136, 143);
+    border          : none;
+    cursor          : pointer;
+}
+
+
+.email {
+
+    width           : 95%;
+    padding-top     : 10px;
+    padding-bottom  : 10px;
+    background-color: #fff;
+    border-radius   : 5px;
+    border          : 1px solid #c1c1c1;
+    font-size       : 14px;
+    font-family     : 'Roboto Mono', monospace;
+    border-radius: 15px ;
+
+}
+
+.pass {
+
+    width           : 75%;
+    padding-top     : 10px;
+    padding-bottom  : 10px;
+    background-color: #fff;
+    border-radius   : 5px;
+    border          : 1px solid #c1c1c1;
+    font-size       : 14px;
+    font-family     : 'Roboto Mono', monospace;
+    border-radius: 15px 0px 0px 15px;
+
+}
+
+.eye {
+    border-radius: 0px 15px 15px 0px;
+    margin          : 0;
+    padding         : 0;
+    width           : 20%;
+    padding-top     : 10px;
+    padding-bottom  : 10px;
+    background-color: #fff;
+    border          : 1px solid #c1c1c1;
+    font-size       : 14px;
+}
