@@ -1,11 +1,13 @@
 import "./loginpage.css"
 import { BsFillEyeSlashFill, BsFillEyeFill } from 'react-icons/bs';
 import { useState } from "react"
-import axios from 'axios';
-import swal from 'sweetalert'
+import axios from 'axios'
+import { useHistory } from "react-router-dom";
 
 
-const Loginpage = () => {
+
+const Loginpage = ({setLoginUser}) => {
+    const history = useHistory()
     const [user, setUser] = useState({
 
         email: "",
@@ -29,9 +31,13 @@ const Loginpage = () => {
 
         setPasswordType(!passwordType)
     }
-    const login=() => {
+    const login = () => {
         axios.post("http://localhost:9002/login", user)
-        .then(res=>alert(res.data.message))
+            .then(res => {
+                alert(res.data.message)
+            setLoginUser(res.data.user)
+            history.push("/")
+            })
     }
     return (
 
@@ -51,7 +57,7 @@ const Loginpage = () => {
                 <div className="button" >
                     <input className="submit-btn " type="submit" value="Login" onClick={login} />
                     <div>or</div>
-                    <input className="submit-btn" id="left" type="submit" value="Register" />
+                    <input className="submit-btn" id="left" type="submit" onClick={() => history.push("/register")} value="Register" />
                 </div>
             </div>
             <div className="login">

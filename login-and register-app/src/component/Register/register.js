@@ -3,8 +3,11 @@ import { BsFillEyeSlashFill, BsFillEyeFill } from 'react-icons/bs';
 import { useState } from "react";
 import swal from 'sweetalert'
 import axios from "axios"
+import { useHistory } from "react-router-dom";
 
 const Register = () => {
+const history = useHistory()
+    
     const [user, setUser] = useState({
         name: "",
         email: "",
@@ -31,12 +34,13 @@ const Register = () => {
     const register = async () => {
         const { name, email, password, reEnterPassword } = user
         if (!name || !email || !password || (password !== reEnterPassword)) {
-            swal("Oh noes!!", " request failed!", "error")
+            swal("Oh noes!!", " request failed!", "error")  
             return
         }
         try {
             const res = await axios.post("http://localhost:9002/register", user)
             swal("vola!", "Your profile has been created!", "success");
+            history.push("/login")
         } catch (e) {
             swal("Oh noes!!", " request failed!", "error");
         }
@@ -66,15 +70,14 @@ return (
                     {passwordType ? <BsFillEyeFill /> : <BsFillEyeSlashFill />} </button>
             </div>
             <div className="button" >
-                <input className="submit-btn " type="submit" value="Register" onClick={register} />
+                <input className="submit-btn" type="submit" value="Register" onClick={register} />
                 <div>or</div>
-                <input className="submit-btn" id="left" type="submit" value="Login" />
+                <input className="submit-two"  type="submit" value="Login" onClick={() => history.push("/login")} />
             </div>
 
         </div>
 
-        <div className="login">
-        </div>
+       
 
     </div>
 )
