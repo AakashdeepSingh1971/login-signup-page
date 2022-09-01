@@ -1,26 +1,3 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
-
-# production
-/build
-
-# misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
 Skip to content
 Search or jump to…
 Pull requests
@@ -40,37 +17,13 @@ Actions
 Projects
 Security
 Insights
-login-register-MERN-LocalStorage/.gitignore
+login-register-MERN-LocalStorage/login-and-register-backend/.gitignore
 @PrinceRaaaj
 PrinceRaaaj Login Register MERN App - with LocaleStorage
 Latest commit 48b2c3b on Aug 12, 2021
  History
  1 contributor
-47 lines (36 sloc)  621 Bytes
-
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
-
-# production
-/build
-
-# misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+23 lines (18 sloc)  310 Bytes
 
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
