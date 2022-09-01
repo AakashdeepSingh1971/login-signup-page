@@ -1,6 +1,8 @@
 import "./loginpage.css"
 import { BsFillEyeSlashFill, BsFillEyeFill } from 'react-icons/bs';
 import { useState } from "react"
+import axios from 'axios';
+import swal from 'sweetalert'
 
 
 const Loginpage = () => {
@@ -27,6 +29,10 @@ const Loginpage = () => {
 
         setPasswordType(!passwordType)
     }
+    const login=() => {
+        axios.post("http://localhost:9002/login", user)
+        .then(res=>alert(res.data.message))
+    }
     return (
 
         <div className="userpage">
@@ -43,7 +49,7 @@ const Loginpage = () => {
                         {passwordType ? <BsFillEyeFill /> : <BsFillEyeSlashFill />} </button>
                 </div>
                 <div className="button" >
-                    <input className="submit-btn " type="submit" value="Login" />
+                    <input className="submit-btn " type="submit" value="Login" onClick={login} />
                     <div>or</div>
                     <input className="submit-btn" id="left" type="submit" value="Register" />
                 </div>
